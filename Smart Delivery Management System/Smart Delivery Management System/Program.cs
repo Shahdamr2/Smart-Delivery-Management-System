@@ -48,6 +48,19 @@
             // We cannot create an object from a static class
 
             #endregion
+            #region Question 4
+
+            // a) An Extension Method allows us to add a method to an existing type
+            // without modifying the original class
+
+            // b) The first parameter must use the this keyword
+
+            // c) An Extension Method must be declared inside a static class
+
+            // d) No, an Extension Method cannot directly access private members
+            // of the class it extends
+
+            #endregion
         }
     }
 }
