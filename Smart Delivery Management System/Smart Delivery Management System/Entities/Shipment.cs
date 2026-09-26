@@ -8,20 +8,28 @@ namespace Assignment09.Entities
         public string Description { get; set; }
         public decimal Weight { get; set; }
         public decimal DeliveryFee { get; set; }
+        public DeliveryAddress Destination { get; set; }
 
         public Shipment(
             string trackingCode,
             string description,
             decimal weight,
-            decimal deliveryFee)
+            decimal deliveryFee,
+            DeliveryAddress destination)
         {
             TrackingCode = trackingCode;
             Description = description;
             Weight = weight;
             DeliveryFee = deliveryFee;
+            Destination = destination;
         }
 
         public Shipment CopyShipment()
+        {
+            return (Shipment)MemberwiseClone();
+        }
+
+        public Shipment ShallowCopy()
         {
             return (Shipment)MemberwiseClone();
         }

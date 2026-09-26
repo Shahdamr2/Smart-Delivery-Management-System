@@ -10,7 +10,27 @@ namespace Assignment09.Inheritance
             string description,
             decimal weight,
             decimal deliveryFee)
-            : base(trackingCode, description, weight, deliveryFee)
+            : base(
+                trackingCode,
+                description,
+                weight,
+                deliveryFee,
+                new DeliveryAddress("Cairo", "Main Street", 1))
+        {
+        }
+
+        public StandardShipment(
+            string trackingCode,
+            string description,
+            decimal weight,
+            decimal deliveryFee,
+            DeliveryAddress destination)
+            : base(
+                trackingCode,
+                description,
+                weight,
+                deliveryFee,
+                destination)
         {
         }
 

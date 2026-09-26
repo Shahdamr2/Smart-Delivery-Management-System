@@ -88,22 +88,48 @@ namespace Smart_Delivery_Management_System
 
             Shipment shipment2 = shipment1;
 
-            Console.WriteLine("==========================================");
-            Console.WriteLine("Object Copying");
-            Console.WriteLine("==========================================");
-            Console.WriteLine();
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Object Copying");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
 
-            Console.WriteLine($"Original Shipment  : {shipment1.TrackingCode}");
-            Console.WriteLine($"Assigned Shipment  : {shipment2.TrackingCode}");
-            Console.WriteLine();
+            //Console.WriteLine($"Original Shipment  : {shipment1.TrackingCode}");
+            //Console.WriteLine($"Assigned Shipment  : {shipment2.TrackingCode}");
+            //Console.WriteLine();
 
-            Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment2)}");
+            //Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment2)}");
 
             Shipment shipment3 = shipment1.CopyShipment();
 
+            //Console.WriteLine();
+            //Console.WriteLine($"Copied Shipment    : {shipment3.TrackingCode}");
+            //Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment3)}");
+
+            #endregion
+            #region Practical Question 2 - Shallow Copy
+
+            Shipment shallowCopy = shipment1.ShallowCopy();
+
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Shallow Copy");
+            Console.WriteLine("------------------------------------------");
             Console.WriteLine();
-            Console.WriteLine($"Copied Shipment    : {shipment3.TrackingCode}");
-            Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment3)}");
+
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address   : {shallowCopy.Destination.City}");
+
+            Console.WriteLine();
+            Console.WriteLine("Changing copied shipment address...");
+
+            shallowCopy.Destination.City = "Giza";
+
+            Console.WriteLine();
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address   : {shallowCopy.Destination.City}");
+
+            Console.WriteLine();
+            Console.WriteLine(
+                $"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, shallowCopy.Destination)}");
 
             #endregion
         }
