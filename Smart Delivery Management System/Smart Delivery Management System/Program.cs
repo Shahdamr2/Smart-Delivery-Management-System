@@ -33,6 +33,21 @@
             // without affecting the original object.
 
             #endregion
+            #region Question 3
+
+            // a) A static field belongs to the class and is shared by all objects,
+            // while an instance field belongs to each object
+
+            // b) A static method belongs to the class.
+            // It cannot directly access instance members
+
+            // c) A static constructor initializes static data and is executed
+            // automatically once before the type is first used
+
+            // d) A static class contains only static members
+            // We cannot create an object from a static class
+
+            #endregion
         }
     }
 }
