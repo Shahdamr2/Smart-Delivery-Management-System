@@ -1,4 +1,7 @@
-﻿namespace Smart_Delivery_Management_System
+﻿using Assignment09.Entities;
+using Assignment09.Inheritance;
+
+namespace Smart_Delivery_Management_System
 {
     internal class Program
     {
@@ -73,6 +76,34 @@
 
             // d) If a partial method has no implementation, the compiler removes
             // its declaration and calls
+
+            #endregion
+            #region Practical Question 1 - Object Copying
+
+            Shipment shipment1 = new StandardShipment(
+                "SH001",
+                "Laptop",
+                3,
+                80);
+
+            Shipment shipment2 = shipment1;
+
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Object Copying");
+            Console.WriteLine("==========================================");
+            Console.WriteLine();
+
+            Console.WriteLine($"Original Shipment  : {shipment1.TrackingCode}");
+            Console.WriteLine($"Assigned Shipment  : {shipment2.TrackingCode}");
+            Console.WriteLine();
+
+            Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment2)}");
+
+            Shipment shipment3 = shipment1.CopyShipment();
+
+            Console.WriteLine();
+            Console.WriteLine($"Copied Shipment    : {shipment3.TrackingCode}");
+            Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment3)}");
 
             #endregion
         }
