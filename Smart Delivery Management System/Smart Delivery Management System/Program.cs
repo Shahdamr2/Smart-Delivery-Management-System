@@ -61,6 +61,20 @@
             // of the class it extends
 
             #endregion
+            #region Question 5
+
+            // a) A Partial Class allows one class to be split into multiple files
+
+            // b) A developer can split a class into multiple files to organize
+            // large classes and separate responsibilities
+
+            // c) A Partial Method is a method whose declaration and implementation
+            // can be placed in different parts of the same partial class
+
+            // d) If a partial method has no implementation, the compiler removes
+            // its declaration and calls
+
+            #endregion
         }
     }
 }
