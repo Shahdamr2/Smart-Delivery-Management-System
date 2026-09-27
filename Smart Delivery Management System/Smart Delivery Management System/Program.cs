@@ -160,12 +160,20 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 4 - Static Field
 
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Static Field");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Total Shipments Created : {Shipment.TotalShipmentsCreated}");
+
+            #endregion
+            #region Practical Question 5 - Static Constructor
+
             Console.WriteLine("==========================================");
-            Console.WriteLine("Static Field");
+            Console.WriteLine("Static Constructor");
             Console.WriteLine("==========================================");
             Console.WriteLine();
-
-            Console.WriteLine($"Total Shipments Created : {Shipment.TotalShipmentsCreated}");
 
             #endregion
         }

@@ -12,6 +12,12 @@ namespace Assignment09.Entities
         public decimal DeliveryFee { get; set; }
         public DeliveryAddress Destination { get; set; }
 
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
+
         public Shipment(
             string trackingCode,
             string description,
