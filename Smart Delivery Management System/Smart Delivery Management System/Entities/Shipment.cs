@@ -35,5 +35,16 @@ namespace Assignment09.Entities
         }
 
         public abstract void PrintShipment();
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)MemberwiseClone();
+
+            copy.Destination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber);
+
+            return copy;
+        }
     }
 }
