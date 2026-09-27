@@ -202,12 +202,12 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 8 - Extension Methods
 
-            StandardShipment standardShipment = new StandardShipment(
-                "SH001",
-                "Laptop",
-                3,
-                80,
-                new DeliveryAddress("Cairo", "Main Street", 10));
+            //StandardShipment standardShipment = new StandardShipment(
+            //    "SH001",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Main Street", 10));
 
             ExpressShipment expressShipment = new ExpressShipment(
                 "SH002",
@@ -244,17 +244,35 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 9 - Partial Shipment Class
 
-            Console.WriteLine();
-            Console.WriteLine("==========================================");
-            Console.WriteLine("Partial Shipment Class");
-            Console.WriteLine("==========================================");
-            Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Partial Shipment Class");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
 
-            Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
+            //Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
+
+            //standardShipment.UpdateTrackingStatus("Out For Delivery");
+
+            //Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
+
+            #endregion
+            #region Practical Question 10 - Partial Method
+
+            StandardShipment standardShipment = new StandardShipment(
+                "SH001",
+                "Laptop",
+                3,
+                80,
+                new DeliveryAddress("Cairo", "Main Street", 10));
+
+            Console.WriteLine();
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Partial Method");
+            Console.WriteLine("==========================================");
+            Console.WriteLine();
 
             standardShipment.UpdateTrackingStatus("Out For Delivery");
-
-            Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
 
             #endregion
         }

@@ -61,6 +61,12 @@ namespace Assignment09.Entities
             return TotalShipmentsCreated;
         }
 
+        partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine(
+                $"Tracking status changed to: {newStatus}");
+        }
+
         public abstract void PrintShipment();
     }
 }
