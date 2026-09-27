@@ -2,6 +2,7 @@
 using Assignment09.Entities;
 using Assignment09.Inheritance;
 using Assignment09.Utilities;
+using Assignment09.Extensions;
 namespace Smart_Delivery_Management_System
 {
     internal class Program
@@ -190,13 +191,55 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 7 - Static Class
 
+            //Console.WriteLine();
+            //DeliveryUtilities.PrintSystemTitle();
+            //Console.WriteLine();
+
+            //DeliveryUtilities.PrintSeparator();
+            //Console.WriteLine("Static Class");
+            //DeliveryUtilities.PrintSeparator();
+
+            #endregion
+            #region Practical Question 8 - Extension Methods
+
+            StandardShipment standardShipment = new StandardShipment(
+                "SH001",
+                "Laptop",
+                3,
+                80,
+                new DeliveryAddress("Cairo", "Main Street", 10));
+
+            ExpressShipment expressShipment = new ExpressShipment(
+                "SH002",
+                "Mobile",
+                2,
+                60,
+                new DeliveryAddress("Cairo", "Main Street", 20),
+                30);
+
+            InternationalShipment internationalShipment = new InternationalShipment(
+                "SH003",
+                "Medical Equipment",
+                8,
+                100,
+                new DeliveryAddress("Cairo", "Main Street", 30),
+                "Germany",
+                60);
+
             Console.WriteLine();
-            DeliveryUtilities.PrintSystemTitle();
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Extension Methods");
+            Console.WriteLine("==========================================");
             Console.WriteLine();
 
-            DeliveryUtilities.PrintSeparator();
-            Console.WriteLine("Static Class");
-            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine(standardShipment.GetSummary());
+            Console.WriteLine(expressShipment.GetSummary());
+            Console.WriteLine(internationalShipment.GetSummary());
+
+            Console.WriteLine();
+
+            Console.WriteLine($"SH001 Is Delivered : {standardShipment.IsDelivered()}");
+            Console.WriteLine($"SH003 Is Delivered : {internationalShipment.IsDelivered()}");
 
             #endregion
         }

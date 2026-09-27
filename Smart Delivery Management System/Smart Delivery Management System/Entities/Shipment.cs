@@ -12,6 +12,8 @@ namespace Assignment09.Entities
         public decimal DeliveryFee { get; set; }
         public DeliveryAddress Destination { get; set; }
 
+        private string trackingStatus = "In Transit";
+
         static Shipment()
         {
             TotalShipmentsCreated = 0;
@@ -59,6 +61,19 @@ namespace Assignment09.Entities
         public static int GetTotalShipmentsCreated()
         {
             return TotalShipmentsCreated;
+        }
+
+        public string GetTrackingStatus()
+        {
+            return trackingStatus;
+        }
+
+        public void UpdateTrackingStatus(string newStatus)
+        {
+            if (!string.IsNullOrWhiteSpace(newStatus))
+            {
+                trackingStatus = newStatus;
+            }
         }
 
         public abstract void PrintShipment();
