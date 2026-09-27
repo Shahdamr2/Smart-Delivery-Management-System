@@ -1,6 +1,7 @@
-﻿using Assignment09.Entities;
+﻿using System;
+using Assignment09.Entities;
 using Assignment09.Inheritance;
-
+using Assignment09.Utilities;
 namespace Smart_Delivery_Management_System
 {
     internal class Program
@@ -178,13 +179,24 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 6 - Static Method
 
-            Console.WriteLine("==========================================");
-            Console.WriteLine("Static Method");
-            Console.WriteLine("==========================================");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Static Method");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
+
+            //Console.WriteLine(
+            //    $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+
+            #endregion
+            #region Practical Question 7 - Static Class
+
+            Console.WriteLine();
+            DeliveryUtilities.PrintSystemTitle();
             Console.WriteLine();
 
-            Console.WriteLine(
-                $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Static Class");
+            DeliveryUtilities.PrintSeparator();
 
             #endregion
         }
