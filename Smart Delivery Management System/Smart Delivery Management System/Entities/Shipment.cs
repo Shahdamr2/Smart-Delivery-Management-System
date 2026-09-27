@@ -4,6 +4,8 @@ namespace Assignment09.Entities
 {
     public abstract class Shipment
     {
+        public static int TotalShipmentsCreated;
+
         public string TrackingCode { get; set; }
         public string Description { get; set; }
         public decimal Weight { get; set; }
@@ -22,6 +24,8 @@ namespace Assignment09.Entities
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+
+            TotalShipmentsCreated++;
         }
 
         public Shipment CopyShipment()
@@ -34,7 +38,6 @@ namespace Assignment09.Entities
             return (Shipment)MemberwiseClone();
         }
 
-        public abstract void PrintShipment();
         public Shipment DeepCopy()
         {
             Shipment copy = (Shipment)MemberwiseClone();
@@ -46,5 +49,7 @@ namespace Assignment09.Entities
 
             return copy;
         }
+
+        public abstract void PrintShipment();
     }
 }

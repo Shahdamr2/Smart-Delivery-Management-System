@@ -134,28 +134,38 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 3 - Deep Copy
 
-            Shipment deepCopy = shipment1.DeepCopy();
+            //Shipment deepCopy = shipment1.DeepCopy();
+
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Deep Copy");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            //Console.WriteLine($"Copied Shipment Address   : {deepCopy.Destination.City}");
+
+            //Console.WriteLine();
+            //Console.WriteLine("Changing copied shipment address...");
+
+            //deepCopy.Destination.City = "Giza";
+
+            //Console.WriteLine();
+            //Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            //Console.WriteLine($"Copied Shipment Address   : {deepCopy.Destination.City}");
+
+            //Console.WriteLine();
+            //Console.WriteLine(
+            //    $"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, deepCopy.Destination)}");
+
+            #endregion
+            #region Practical Question 4 - Static Field
 
             Console.WriteLine("==========================================");
-            Console.WriteLine("Deep Copy");
+            Console.WriteLine("Static Field");
             Console.WriteLine("==========================================");
             Console.WriteLine();
 
-            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
-            Console.WriteLine($"Copied Shipment Address   : {deepCopy.Destination.City}");
-
-            Console.WriteLine();
-            Console.WriteLine("Changing copied shipment address...");
-
-            deepCopy.Destination.City = "Giza";
-
-            Console.WriteLine();
-            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
-            Console.WriteLine($"Copied Shipment Address   : {deepCopy.Destination.City}");
-
-            Console.WriteLine();
-            Console.WriteLine(
-                $"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, deepCopy.Destination)}");
+            Console.WriteLine($"Total Shipments Created : {Shipment.TotalShipmentsCreated}");
 
             #endregion
         }
