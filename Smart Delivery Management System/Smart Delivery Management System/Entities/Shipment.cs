@@ -2,7 +2,7 @@
 
 namespace Assignment09.Entities
 {
-    public abstract class Shipment
+    public abstract partial class Shipment
     {
         public static int TotalShipmentsCreated;
 
@@ -11,8 +11,6 @@ namespace Assignment09.Entities
         public decimal Weight { get; set; }
         public decimal DeliveryFee { get; set; }
         public DeliveryAddress Destination { get; set; }
-
-        private string trackingStatus = "In Transit";
 
         static Shipment()
         {
@@ -61,19 +59,6 @@ namespace Assignment09.Entities
         public static int GetTotalShipmentsCreated()
         {
             return TotalShipmentsCreated;
-        }
-
-        public string GetTrackingStatus()
-        {
-            return trackingStatus;
-        }
-
-        public void UpdateTrackingStatus(string newStatus)
-        {
-            if (!string.IsNullOrWhiteSpace(newStatus))
-            {
-                trackingStatus = newStatus;
-            }
         }
 
         public abstract void PrintShipment();

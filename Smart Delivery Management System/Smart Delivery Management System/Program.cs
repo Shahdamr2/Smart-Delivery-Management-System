@@ -226,20 +226,35 @@ namespace Smart_Delivery_Management_System
                 "Germany",
                 60);
 
+            //Console.WriteLine();
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Extension Methods");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
+
+            //Console.WriteLine(standardShipment.GetSummary());
+            //Console.WriteLine(expressShipment.GetSummary());
+            //Console.WriteLine(internationalShipment.GetSummary());
+
+            //Console.WriteLine();
+
+            //Console.WriteLine($"SH001 Is Delivered : {standardShipment.IsDelivered()}");
+            //Console.WriteLine($"SH003 Is Delivered : {internationalShipment.IsDelivered()}");
+
+            #endregion
+            #region Practical Question 9 - Partial Shipment Class
+
             Console.WriteLine();
             Console.WriteLine("==========================================");
-            Console.WriteLine("Extension Methods");
+            Console.WriteLine("Partial Shipment Class");
             Console.WriteLine("==========================================");
             Console.WriteLine();
 
-            Console.WriteLine(standardShipment.GetSummary());
-            Console.WriteLine(expressShipment.GetSummary());
-            Console.WriteLine(internationalShipment.GetSummary());
+            Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
 
-            Console.WriteLine();
+            standardShipment.UpdateTrackingStatus("Out For Delivery");
 
-            Console.WriteLine($"SH001 Is Delivered : {standardShipment.IsDelivered()}");
-            Console.WriteLine($"SH003 Is Delivered : {internationalShipment.IsDelivered()}");
+            Console.WriteLine($"Tracking Status : {standardShipment.GetTrackingStatus()}");
 
             #endregion
         }
