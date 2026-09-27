@@ -56,6 +56,11 @@ namespace Assignment09.Entities
             return copy;
         }
 
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
         public abstract void PrintShipment();
     }
 }

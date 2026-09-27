@@ -170,10 +170,21 @@ namespace Smart_Delivery_Management_System
             #endregion
             #region Practical Question 5 - Static Constructor
 
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("Static Constructor");
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine();
+
+            #endregion
+            #region Practical Question 6 - Static Method
+
             Console.WriteLine("==========================================");
-            Console.WriteLine("Static Constructor");
+            Console.WriteLine("Static Method");
             Console.WriteLine("==========================================");
             Console.WriteLine();
+
+            Console.WriteLine(
+                $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
 
             #endregion
         }
